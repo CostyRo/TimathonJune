@@ -1,10 +1,10 @@
 import streamlit as st
 import sidebar
-from PIL import Image
+from images import logoImage,iconImage
 from pistonapi import PistonAPI
 
 def showLogo():
-    st.image(Image.open("images\logo.png"))
+    st.image(logoImage)
 
 def execode(language,code):
     piston = PistonAPI()
@@ -144,7 +144,7 @@ def transform(language):
 	return language.lower().replace("+","p").replace("#","s")
 
 def prepare():
-    st.set_page_config("CodeĐscovery","images\icon.png")
+    st.set_page_config("CodeĐscovery",logoImage)
 
     st.markdown("<style>p{font-family: Verdana,sans-serif;font-size: 1.25rem;}h1,h2,h3{font-family: \"Times New Roman\",serif;}h1{font-size: 2.25rem;}h2{font-size: 2rem;}h3{font-size: 1.75rem;}</style>",True)
 

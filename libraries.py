@@ -1,11 +1,11 @@
-from PIL import Image
+import images
 import streamlit as st
 import functions
 
 def open_cv():
 	st.markdown("<h2>Open-Cv</h2>",True)
 
-	st.image(Image.open("images\opencv.png"),use_column_width="auto")
+	st.image(images.opencvImage,use_column_width="auto")
 
 	st.markdown("<p>Open-Cv is a great library used for computer vision, you can do so many things with it, like image recognition, face recognition, image manipulation, detecting features in images, pattern maching in images. Is also available in other languages, like C++, Java, Javascript.</p>",True)
 
@@ -35,7 +35,7 @@ cv.waitKey(0)
 def pygame():
 	st.markdown("<h2>Pygame</h2>",True)
 
-	st.image(Image.open("images\pygame.png"),use_column_width="auto")
+	st.image(images.pygameImage,use_column_width="auto")
 
 	st.markdown("<p>Pygame is a great Python library to build 2d games, it can to be used to build simple games, like pong, breakout, space inavanders, snake or you can build some amazing platformers or some amazing adventure 2d games.</p>",True)
 
@@ -91,7 +91,7 @@ while running:
 def streamlit():
 	st.markdown("<h2>Streamlit</h2>",True)
 
-	st.image(Image.open("images\streamlit.png"),use_column_width="auto")
+	st.image(images.streamlitImage,use_column_width="auto")
 
 	st.markdown("<p>Streamlit is the library used for making this website, is a good library for making small websites and for making frontend for data scrience application.</p>",True)
 
@@ -106,7 +106,7 @@ st.title("A simple website")
 def python():
 	st.markdown("<h1>Python</h1>",True)
 
-	st.image(Image.open("images\python.png"),use_column_width="auto")
+	st.image(images.pythonImage,use_column_width="auto")
 
 	open_cv()
 
@@ -117,7 +117,7 @@ def python():
 def candcpp():
 	st.markdown("<h1>C/C++</h1>",True)
 
-	st.image(Image.open("images\candc++.png"),use_column_width="auto")
+	st.image(images.candcppImage,use_column_width="auto")
 
 	st.markdown("<p>C and C++ have a powerful standard library with many algorithms and data structures.</p>",True)
 

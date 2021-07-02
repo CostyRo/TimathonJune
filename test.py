@@ -1,49 +1,49 @@
-from PIL import Image
+import images
 import streamlit as st
 import functions
 
 def python():
-	st.image(Image.open("images\python.png"),use_column_width="auto")
+	st.image(images.pythonImage,use_column_width="auto")
 
 	st.markdown("<p>I think Python is the best programming languages for you! Python is a great language for beginners, for people who love machine learning and data science, for people who want to do web development and for people who are interesed in math.</p>",True)
 
 def c():
-	st.image(Image.open("images\c.png"),use_column_width="auto")
+	st.image(images.cImage,use_column_width="auto")
 
 	st.markdown("<p>I think C is the best programming languages for you! C is a great lanuage to learn programming and to learn more about a computer, a great language for embedded programming and low-level programming.</p>",True)
 
 def cpp():
-	st.image(Image.open("images\c++.png"),use_column_width="auto")
+	st.image(images.cppImage,use_column_width="auto")
 
 	st.markdown("<p>I think C++ is the best programming languages for you! C++ is a great languages for competitive programming, a great language to become in nerd/geek in programming and a great language for making games.</p>",True)
 
 def cs():
-	st.image(Image.open("images\c#.png"),use_column_width="auto")
+	st.image(images.csImage,use_column_width="auto")
 
 	st.markdown("<p>I think C# is the best programming languages for you! C# is a great language for people who want to do desktop, web and mobile development and also a great language for making games.</p>",True)
 
 def java():
-	st.image(Image.open("images\java.png"),use_column_width="auto")
+	st.image(images.javaImage,use_column_width="auto")
 
 	st.markdown("<p>I think Java is the best programming languages for you! Java is a great language for making android development and for making web development.</p>",True)
 
 def javascript():
-	st.image(Image.open("images\javascript.png"),use_column_width="auto")
+	st.image(images.javascriptImage,use_column_width="auto")
 
 	st.markdown("<p>I think Javascript is the best programming languages for you! Javascript is a great language because is the language of the web, we can do web development, cross-platform mobile development and other awesome things.</p>",True)
 
 def haskell():
-	st.image(Image.open("images\haskell.png"),use_column_width="auto")
+	st.image(images.haskellImage,use_column_width="auto")
 
 	st.markdown("<p>I think Haskell is the best programming languages for you! WOW! Someone who got this, you are unique, if you got this it means you are already a great programmer or you will become a great programmer who love functional programming.</p>",True)
 
 def kotlin():
-	st.image(Image.open("images\kotlin.png"),use_column_width="auto")
+	st.image(images.kotlinImage,use_column_width="auto")
 
 	st.markdown("<p>I think Kotlin is the best programming languages for you! Kotlin is a great language for making android development, ios development and web development, Kotlin is a new language with a lot of potential.</p>",True)
 
 def swift():
-	st.image(Image.open("images\swift.png"),use_column_width="auto")
+	st.image(images.swiftImage,use_column_width="auto")
 
 	st.markdown("<p>I think Swift is the best programming languages for you! Swift is the perfect language for Apple fans who want to do ios development.</p>",True)
 

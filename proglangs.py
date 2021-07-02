@@ -1,11 +1,11 @@
 import streamlit as st
 import functions
-from PIL import Image
+import images
 
 def python():
 	st.markdown("<h1>Python</h1>",True)
 
-	st.image(Image.open("images\python.png"),use_column_width="auto")
+	st.image(images.pythonImage,use_column_width="auto")
 
 	st.markdown("<p>Python is a great programming language which is a good starting language for beginners, it is used for many tasks, like artificial intelligence/machine learning, data science, computer vision, web/mobile/desktop development, statistics, scripting, web scraping. Python is used from teaching kids to programming to develop large applications and machine learning models.</p>",True)
 
@@ -102,7 +102,7 @@ for i in (i**2 for i in range(50)):
 def c():
 	st.markdown("<h1>C</h1>",True)
 
-	st.image(Image.open("images\c.png"),use_column_width="auto")
+	st.image(images.cImage,use_column_width="auto")
 
 	st.markdown("<p>C is a great programming language which is hard for begginers, but it offer a good understanding of how memory works and how a computer works, it is used for embedded programming and for operatings systems.</p>",True)
 
@@ -207,7 +207,7 @@ int main()
 def cpp():
 	st.markdown("<h1>C++</h1>",True)
 
-	st.image(Image.open("images\c++.png"),use_column_width="auto")
+	st.image(images.cppImage,use_column_width="auto")
 
 	st.markdown("<p>C++ is a great programming language which is hard for begginers because derive from C, but it offer a good understanding of how memory works and how a computer works, it is used for embedded programming, operatings systems and AAA games.</p>",True)
 
@@ -386,7 +386,7 @@ int main()
 def cs():
 	st.markdown("<h1>C#</h1>",True)
 
-	st.image(Image.open("images\c#.png"),use_column_width="auto")
+	st.image(images.csImage,use_column_width="auto")
 
 	st.markdown("<p>C# is a very used programming language in this days, it is used fro many things, like game development with Unity, desktop application development and web development with .NET framework or web devlopement direct in web assembly with Blazor.</p>",True)
 
@@ -477,7 +477,7 @@ static int ecuationSolver(int a, int b, int c)
 def kotlin():
 	st.markdown("<h1>Kotlin</h1>",True)
 
-	st.image(Image.open("images\kotlin.png"),use_column_width="auto")
+	st.image(images.kotlinImage,use_column_width="auto")
 
 	st.markdown("<p>Kotlin is a programming language which is designed to replace java for android development. Google make kotlin official language for android developement since 2017. Kotlin community grow fast and now kotlin support many other things, like ios app development, desktop development and web development.</p>",True)
 
@@ -552,7 +552,7 @@ val len=str2.length//compile error, because is a string that accept null type
 def haskell():
 	st.markdown("<h1>Haskell</h1>",True)
 
-	st.image(Image.open("images\haskell.png"),use_column_width="auto")
+	st.image(images.haskellImage,use_column_width="auto")
 
 	st.markdown("<p>Haskell is a great programming language to learn functional programming, it is don't used so much in development.</p>",True)
 
