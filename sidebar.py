@@ -14,7 +14,7 @@ def sidebar():
 
 	with col1:
 		st.sidebar.image(Image.open("images\github.png"),use_column_width="auto")
-		st.sidebar.markdown("[Github link](https://github.com/CostyRo \"github\")")
+		st.sidebar.markdown("[Github link](https://github.com/CostyRo/TimathonJune \"github\")")
 	with col2:
 		st.sidebar.image(Image.open("images\patreon.png"),use_column_width="auto")
 		st.sidebar.markdown("[Patreon link](https://www.patreon.com \"patron\")")

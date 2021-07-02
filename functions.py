@@ -1,4 +1,5 @@
 import streamlit as st
+import sidebar
 from PIL import Image
 from pistonapi import PistonAPI
 
@@ -123,3 +124,35 @@ def execode(language,code):
         st.code(piston.execute("yeethon","3.10.0",code))
     elif language=="Zig":
         st.code(piston.execute("zig","0.8.0",code))
+
+def change(points,sign,language):
+	if sign=="+": points[language]+=1
+	elif sign=="-": points[language]-=1
+
+def modify(points,list):
+	change(points,list[0],"Python")
+	change(points,list[1],"C")
+	change(points,list[2],"C++")
+	change(points,list[3],"C#")
+	change(points,list[4],"Java")
+	change(points,list[5],"Javascript")
+	change(points,list[6],"Haskell")
+	change(points,list[7],"Kotlin")
+	change(points,list[8],"Swift")
+
+def transform(language):
+	return language.lower().replace("+","p").replace("#","s")
+
+def prepare():
+    st.set_page_config("CodeĐscovery","images\icon.png")
+
+    st.markdown("<style>p{font-family: Verdana,sans-serif;font-size: 1.25rem;}h1,h2,h3{font-family: \"Times New Roman\",serif;}h1{font-size: 2.25rem;}h2{font-size: 2rem;}h3{font-size: 1.75rem;}</style>",True)
+
+    st.sidebar.markdown("___")
+
+    st.sidebar.markdown("<h1>Go to:</h1>",True)
+
+def preparePage():
+    sidebar.sidebar()
+
+    showLogo()

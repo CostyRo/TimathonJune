@@ -1,40 +1,20 @@
 import streamlit as st
-import sidebar
 import functions
-
+import compilerstrings
 
 def app():
-	sidebar.sidebar()
+	functions.preparePage()
 
-	functions.showLogo()
+	st.warning(compilerstrings.uf)
 
-	st.warning("Unfortunately most of the syntaxs highlighting don't work😔")
-
-	language=st.selectbox("Choose the programming languageuage:",["Bash","Brainfuck","Cjam","Clojure","Cobol","Coffeescript","Cow","Crystal","Dart","Dash","Typescript","Javascript","C#","Dragon","Elixir","Emacs","Erlanguage","Awk","C","C++","D","Fortran","Go","Golfscript","Groovy","Haskell","Java","Jelly","Julia","Kotlin","Lisp","Lolcode","Lua","Nasm","Nasm64","Nim","Ocaml","Matlab","Osabie","Paradoc","Pascal","Perl","Php","Ponylanguage","Prolog","Pure","Pyth","Python2","Python","Raku","Rockstar","Ruby","Rust","Scala","Swift","V","Yeethon","Zig"])
+	language=st.selectbox(compilerstrings.choose,compilerstrings.programmingLanguages)
 
 	col1,col2=st.beta_columns(2)
 
-	with col1:
-		code=st.text_area("Write your code here: ","",250)
+	with col1: code=st.text_area("Write your code here: ","",250)
 
 	with col2:
-		if code=="":
-			st.code("""
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-⠀
-""",language)
-		else:
-			st.code(code+"".join("⠀\n" for _ in range(13-len(code.split("\n")))),language)
+		if code=="": st.code(compilerstrings.emptyCode,language)
+		else: st.code(code+"".join("⠀\n" for _ in range(13-len(code.split("\n")))),language)
 
-	if st.button("▶️ Press to run the code"):
-		functions.execode(language)
+	if st.button(compilerstrings.run): functions.execode(language)

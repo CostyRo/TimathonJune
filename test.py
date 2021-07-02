@@ -1,22 +1,6 @@
 from PIL import Image
 import streamlit as st
-import sidebar
 import functions
-
-def change(points,sign,language):
-	if sign=="+": points[language]+=1
-	elif sign=="-": points[language]-=1
-
-def modify(points,list):
-	change(points,list[0],"Python")
-	change(points,list[1],"C")
-	change(points,list[2],"C++")
-	change(points,list[3],"C#")
-	change(points,list[4],"Java")
-	change(points,list[5],"Javascript")
-	change(points,list[6],"Haskell")
-	change(points,list[7],"Kotlin")
-	change(points,list[8],"Swift")
 
 def python():
 	st.image(Image.open("images\python.png"),use_column_width="auto")
@@ -63,8 +47,7 @@ def swift():
 
 	st.markdown("<p>I think Swift is the best programming languages for you! Swift is the perfect language for Apple fans who want to do ios development.</p>",True)
 
-def transform(language):
-	return language.lower().replace("+","p").replace("#","s")
+
 
 def app():
 	points={
@@ -81,9 +64,7 @@ def app():
 
 	submit=False
 
-	sidebar.sidebar()
-
-	functions.showLogo()
+	functions.preparePage()
 
 	st.markdown("<h1>Choose the programming language which suits you best: </h1>",True)
 
@@ -96,8 +77,8 @@ def app():
 
 		answear1=st.radio("",["Yes","No"],key="1")
 
-		if answear1=="Yes": modify(points,["+","+","-","-","","+","-","",""])
-		else: modify(points,["","","+","","","","+","",""])
+		if answear1=="Yes": functions.modify(points,["+","+","-","-","","+","-","",""])
+		else: functions.modify(points,["","","+","","","","+","",""])
 
 		st.markdown("<h2>Second question:</h2>",True)
 
@@ -105,7 +86,7 @@ def app():
 
 		answear2=st.radio("",["Yes","No"],key="2")
 
-		if answear2=="Yes": modify(points,["+","-","-","+","+","+","","+",""])
+		if answear2=="Yes": functions.modify(points,["+","-","-","+","+","+","","+",""])
 
 		st.markdown("<h2>Third question:</h2>",True)
 
@@ -113,7 +94,7 @@ def app():
 
 		answear3=st.radio("",["Yes","No"],key="3")
 
-		if answear3=="Yes": modify(points,["+","+","-","-","","+","-","",""])
+		if answear3=="Yes": functions.modify(points,["+","+","-","-","","+","-","",""])
 
 		st.markdown("<h2>Fourth question:</h2>",True)
 
@@ -121,7 +102,7 @@ def app():
 
 		answear4=st.radio("",["Yes","No"],key="4")
 
-		if answear4=="Yes": modify(points,["+","+","+","+","","","","","+"])
+		if answear4=="Yes": functions.modify(points,["+","+","+","+","","","","","+"])
 
 		st.markdown("<h2>Fifth question:</h2>",True)
 
@@ -129,7 +110,7 @@ def app():
 
 		answear5=st.radio("",["Yes","No"],key="5")
 
-		if answear5=="Yes": modify(points,["","","+","+","","","-","-","-"])
+		if answear5=="Yes": functions.modify(points,["","","+","+","","","-","-","-"])
 
 		st.markdown("<h2>Sixth question:</h2>",True)
 
@@ -137,7 +118,7 @@ def app():
 
 		answear6=st.radio("",["Yes","No"],key="6")
 
-		if answear6=="Yes": modify(points,["+","-","+","","","+","-","",""])
+		if answear6=="Yes": functions.modify(points,["+","-","+","","","+","-","",""])
 
 		st.markdown("<h2>Seventh question:</h2>",True)
 
@@ -145,7 +126,7 @@ def app():
 
 		answear7=st.radio("",["Yes","No"],key="7")
 
-		if answear7=="Yes": modify(points,["+","-","+","","+","+","","",""])
+		if answear7=="Yes": functions.modify(points,["+","-","+","","+","+","","",""])
 
 		st.markdown("<h2>Eighth question:</h2>",True)
 
@@ -153,7 +134,7 @@ def app():
 
 		answear8=st.radio("",["Yes","No"],key="8")
 
-		if answear8=="Yes": modify(points,["","+","+","+","","+","","",""])
+		if answear8=="Yes": functions.modify(points,["","+","+","+","","+","","",""])
 
 		st.markdown("<h2>Ninth question:</h2>",True)
 
@@ -161,7 +142,7 @@ def app():
 
 		answear9=st.radio("",["Yes","No"],key="9")
 
-		if answear9=="Yes": modify(points,["","+","+","-","-","-","","-","-"])
+		if answear9=="Yes": functions.modify(points,["","+","+","-","-","-","","-","-"])
 
 		st.markdown("<h2>Tenth question:</h2>",True)
 
@@ -169,7 +150,7 @@ def app():
 
 		answear10=st.radio("",["Yes","No"],key="10")
 
-		if answear10=="Yes": modify(points,["+","-","","","","+","-","+",""])
+		if answear10=="Yes": functions.modify(points,["+","-","","","","+","-","+",""])
 
 		st.markdown("<h2>Eleventh question:</h2>",True)
 
@@ -177,7 +158,7 @@ def app():
 
 		answear11=st.radio("",["Yes","No"],key="11")
 
-		if answear11=="Yes": modify(points,["+","+","+","-","-","-","+","",""])
+		if answear11=="Yes": functions.modify(points,["+","+","+","-","-","-","+","",""])
 
 		st.markdown("<h2>Twelfth question:</h2>",True)
 
@@ -185,7 +166,7 @@ def app():
 
 		answear12=st.radio("",["Yes","No"],key="12")
 
-		if answear12=="Yes": modify(points,["","-","","-","","","+","+",""])
+		if answear12=="Yes": functions.modify(points,["","-","","-","","","+","+",""])
 
 		st.markdown("<h2>Thirteenth question:</h2>",True)
 
@@ -193,8 +174,8 @@ def app():
 
 		answear13=st.radio("",["Yes","No"],key="13")
 
-		if answear13=="Yes": modify(points,["-","+","+","-","","-","+","-","-"])
-		else: modify(points,["+","-","-","+","","+","-","+","+"])
+		if answear13=="Yes": functions.modify(points,["-","+","+","-","","-","+","-","-"])
+		else: functions.modify(points,["+","-","-","+","","+","-","+","+"])
 
 		st.markdown("<h2>Fourteenth question:</h2>",True)
 
@@ -202,8 +183,8 @@ def app():
 
 		answear14=st.radio("",["Yes","No"],key="14")
 
-		if answear14=="Yes": modify(points,["","+","+","","","","+","-","-"])
-		else: modify(points,["","-","-","","","","-","+","+"])
+		if answear14=="Yes": functions.modify(points,["","+","+","","","","+","-","-"])
+		else: functions.modify(points,["","-","-","","","","-","+","+"])
 
 		st.markdown("<h2>Fifteenth question:</h2>",True)
 
@@ -211,7 +192,7 @@ def app():
 
 		answear15=st.radio("",["Yes","No"],key="15")
 
-		if answear15=="Yes": modify(points,["","-","-","","-","+","-","+","+"])
+		if answear15=="Yes": functions.modify(points,["","-","-","","-","+","-","+","+"])
 
 		st.markdown("<h2>Sixteenth question:</h2>",True)
 
@@ -219,7 +200,7 @@ def app():
 
 		answear16=st.radio("",["Yes","No"],key="16")
 
-		if answear16=="Yes": modify(points,["","","+","","","","","","-"])
+		if answear16=="Yes": functions.modify(points,["","","+","","","","","","-"])
 
 		st.markdown("<h2>Seventeenth question:</h2>",True)
 
@@ -227,8 +208,8 @@ def app():
 
 		answear17=st.radio("",["Hard","Easy"],key="17")
 
-		if answear17=="Hard": modify(points,["-","+","+","","","-","+","",""])
-		else: modify(points,["+","-","-","","","+","-","",""])
+		if answear17=="Hard": functions.modify(points,["-","+","+","","","-","+","",""])
+		else: functions.modify(points,["+","-","-","","","+","-","",""])
 
 		st.markdown("<h2>Eighteenth question:</h2>",True)
 
@@ -236,8 +217,8 @@ def app():
 
 		answear18=st.radio("",["Yes","No","What is this?"],key="18")
 
-		if answear18=="Yes": modify(points,["","-","","+","+","","-","",""])
-		elif answear18=="No": modify(points,["","+","","-","-","","-","",""])
+		if answear18=="Yes": functions.modify(points,["","-","","+","+","","-","",""])
+		elif answear18=="No": functions.modify(points,["","+","","-","-","","-","",""])
 
 		st.markdown("<h2>Nineteenth question:</h2>",True)
 
@@ -245,8 +226,8 @@ def app():
 
 		answear19=st.radio("",["Yes","No","What is this?"],key="19")
 
-		if answear19=="Yes": modify(points,["+","-","","-","-","+","+","+","+"])
-		elif answear19=="No": modify(points,["-","+","","+","+","-","-","-","-"])
+		if answear19=="Yes": functions.modify(points,["+","-","","-","-","+","+","+","+"])
+		elif answear19=="No": functions.modify(points,["-","+","","+","+","-","-","-","-"])
 
 		st.markdown("<h2>Twentieth question:</h2>",True)
 
@@ -254,9 +235,9 @@ def app():
 
 		answear20=st.radio("",["Hobby","Job","Freelance"],key="20")
 
-		if answear20=="Hobby": modify(points,["+","","","+","+","+","-","-","+"])
-		elif answear20=="Job": modify(points,["+","+","","-","","+","","",""])
-		elif answear20=="Freelance": modify(points,["+","-","-","","+","+","-","+","+"])	
+		if answear20=="Hobby": functions.modify(points,["+","","","+","+","+","-","-","+"])
+		elif answear20=="Job": functions.modify(points,["+","+","","-","","+","","",""])
+		elif answear20=="Freelance": functions.modify(points,["+","-","-","","+","+","-","+","+"])	
 
 		if st.form_submit_button("Submit"):
 			submit=True
@@ -266,4 +247,4 @@ def app():
 	if submit:
 		st.markdown(f"<h1>You got {points[0][0]} with {points[0][1]} points!<h1>",True)
 
-		exec(f"{transform(points[0][0])}()")
+		exec(f"{functions.transform(points[0][0])}()")

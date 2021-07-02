@@ -1,5 +1,4 @@
 import streamlit as st
-import sidebar
 import functions
 from PIL import Image
 
@@ -637,9 +636,7 @@ you can see how haskell do calculation only when n is even, when n is odd it do 
 	st.video("https://youtu.be/02_H3LjqMr8")
 
 def app():
-	sidebar.sidebar()
-
-	functions.showLogo()
+	functions.preparePage()
 
 	python()
 

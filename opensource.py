@@ -1,11 +1,8 @@
 import streamlit as st
-import sidebar
 import functions
 
 def app():
-	sidebar.sidebar()
-
-	functions.showLogo()
+	functions.preparePage()
 
 	st.markdown("<h1>Here you can see a list with amazing open source projects you can contribute!</h1>",True)
 

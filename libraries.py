@@ -1,6 +1,5 @@
 from PIL import Image
 import streamlit as st
-import sidebar
 import functions
 
 def open_cv():
@@ -262,9 +261,7 @@ def candcpp():
 """)
 
 def app():
-	sidebar.sidebar()
-
-	functions.showLogo()
+	functions.preparePage()
 
 	python()
 
